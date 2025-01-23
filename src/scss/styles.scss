@@ -1,26 +1,50 @@
-$primary: #5265E1;
-$danger: #FA5959;
+$primary: #5265e1;
+$danger: #fa5959;
+$secondary: gray;
 
 $theme-colors: (
   "primary": $primary,
-  "danger": $danger
+  "danger": $danger,
+  "secondary": $secondary,
 );
 
 @import "bootstrap/scss/bootstrap";
 
-
-
 .navbar {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .navbar-collapse {
-    align-items: center;
-    justify-content: space-between;
-
+  align-items: center;
+  justify-content: space-between;
 }
 
-.figure-back {
-    top: 10vh;
-    right: 0;
+.figure-back-right {
+  top: 10vh;
+  right: 0;
+}
+
+.figure-back-left {
+  top: 5vh;
+  left: 0;
+}
+
+.nav-tabs {
+  .nav-link {
+    border: none;
+    color: gray;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    border-bottom: $danger 2px solid transparent;
+
+    &:hover,
+    &:focus {
+      color: $black;
+      border-bottom: $danger 2px solid;
+    }
+
+    &.active {
+      border-bottom: $danger 2px solid;
+    }
+  }
 }
