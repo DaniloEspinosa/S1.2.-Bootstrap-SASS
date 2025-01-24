@@ -48,3 +48,51 @@ $theme-colors: (
     }
   }
 }
+
+.text-description {
+    width: 50%;
+}
+
+
+.card {
+    border: none;
+    box-shadow: 6px 10px 22px -7px rgba(0,0,0,0.55);
+}
+
+.card-1 {
+    width: 30%;
+    height: 50%;
+}
+
+.card-2{
+    width: 30%;
+    height: 50%;
+    top:10vh;
+}
+
+.card-3{
+    width: 30%;
+    height: 50%;
+    top:20vh;
+}
+
+
+.dotted-spaced {
+    background-image: linear-gradient(to right, $secondary 10%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 20px 3px;
+    background-repeat: repeat-x;
+}
+
+
+@media (max-width: 768px) { 
+
+      .card-1, .card-2, .card-3 {
+        width: 100%;
+    }
+
+    .text-description {
+        width: 75%;
+    }
+}
+
