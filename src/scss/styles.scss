@@ -12,6 +12,10 @@ $theme-colors: (
 
 .navbar {
   padding: 2rem;
+
+  img {
+    width: 150px;
+  }
 }
 
 .navbar-collapse {
@@ -19,13 +23,50 @@ $theme-colors: (
   justify-content: space-between;
 }
 
+// Secciones del main
+.w-40 {
+  width: 40%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.image-section img {
+  width: 54vw;
+}
+
+.circle {
+  height: 30vw;
+  width: 30vw;
+}
+
+.square {
+  height: 30vw;
+  width: 15vw;
+}
+
+.forma-fondo-derecha {
+  width: 45vw;
+  height: 30vw;
+  background-color: $primary;
+  border-radius: 15vw 0 0 15vw ;
+}
+
+.forma-fondo-izquierda {
+  width: 45vw;
+  height: 30vw;
+  background-color: $primary;
+  border-radius: 0 15vw 15vw 0;
+}
+
 .figure-back-right {
-  top: 10vh;
+  top: 20%;
   right: 0;
 }
 
 .figure-back-left {
-  top: 5vh;
+  top: 25%;
   left: 0;
 }
 
@@ -50,49 +91,140 @@ $theme-colors: (
 }
 
 .text-description {
-    width: 50%;
+  width: 70%;
 }
 
+.image-features img {
+  width: 40vw;
+}
 
 .card {
-    border: none;
-    box-shadow: 6px 10px 22px -7px rgba(0,0,0,0.55);
+  border: none;
+  box-shadow: 6px 10px 22px -7px rgba(0, 0, 0, 0.55);
 }
 
-.card-1 {
-    width: 30%;
-    height: 50%;
+.card-1,
+.card-2,
+.card-3 {
+  width: 30%;
+  height: 50%;
 }
 
-.card-2{
-    width: 30%;
-    height: 50%;
-    top:10vh;
+.card-2 {
+  top: 10vh;
 }
 
-.card-3{
-    width: 30%;
-    height: 50%;
-    top:20vh;
+.card-3 {
+  top: 20vh;
 }
-
 
 .dotted-spaced {
-    background-image: linear-gradient(to right, $secondary 10%, rgba(255, 255, 255, 0) 0%);
-    background-position: bottom;
-    background-size: 20px 3px;
-    background-repeat: repeat-x;
+  background-image: linear-gradient(
+    to right,
+    $secondary 10%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 20px 3px;
+  background-repeat: repeat-x;
 }
 
-
-@media (max-width: 768px) { 
-
-      .card-1, .card-2, .card-3 {
-        width: 100%;
-    }
-
-    .text-description {
-        width: 75%;
-    }
+.download-section {
+  margin-bottom: 25vh;
 }
 
+.accordion {
+  width: 60%;
+}
+
+.accordion-button {
+  &:not(.collapsed) {
+    color: black;
+    background-color: white;
+    &::after {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHBhdGggZmlsbD0iIzUyNjVlMSIgZD0iTTEwNC43MDQgMzM4Ljc1MmE2NCA2NCAwIDAgMSA5MC40OTYgMGwzMTYuOCAzMTYuOGwzMTYuOC0zMTYuOGE2NCA2NCAwIDAgMSA5MC40OTYgOTAuNDk2TDU1Ny4yNDggNzkxLjI5NmE2NCA2NCAwIDAgMS05MC40OTYgMEwxMDQuNzA0IDQyOS4yNDhhNjQgNjQgMCAwIDEgMC05MC40OTYiLz48L3N2Zz4=);
+      transform: none;
+    }
+  }
+  &::after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHBhdGggZmlsbD0iIzUyNjVlMSIgZD0iTTEwNC43MDQgNjg1LjI0OGE2NCA2NCAwIDAgMCA5MC40OTYgMGwzMTYuOC0zMTYuOGwzMTYuOCAzMTYuOGE2NCA2NCAwIDAgMCA5MC40OTYtOTAuNDk2TDU1Ny4yNDggMjMyLjcwNGE2NCA2NCAwIDAgMC05MC40OTYgMEwxMDQuNzA0IDU5NC43NTJhNjQgNjQgMCAwIDAgMCA5MC40OTYiLz48L3N2Zz4=);
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.accordion-item {
+  border: none;
+  border-top: var(--#{$prefix}accordion-border-width) solid
+    var(--#{$prefix}accordion-border-color);
+  border-bottom: var(--#{$prefix}accordion-border-width) solid
+    var(--#{$prefix}accordion-border-color);
+}
+
+@media (max-width: 767px) {
+  .w-40,
+  .w-60 {
+    width: 95vw;
+  }
+
+  .image-section img {
+    width: 100%;
+  }
+
+  .image-features img {
+    width: 85%;
+  }
+
+.forma-fondo-derecha {
+  width: 75vw;
+  height: 50vw;
+  background-color: $primary;
+  border-radius: 25vw 0 0 25vw ;
+}
+
+.forma-fondo-izquierda {
+  width: 75vw;
+  height: 50vw;
+  background-color: $primary;
+  border-radius: 0 25vw 25vw 0 ;
+}
+
+  .figure-back-right {
+    top: 15%;
+  }
+
+   .figure-back-left {
+    top: 17%;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3 {
+    margin: 0 30px;
+    width: 100%;
+  }
+
+  .text-description {
+    width: 60%;
+  }
+
+  .accordion {
+    width: 100%;
+  }
+}
+
+@media (max-width: 359px) {
+  .navbar {
+    padding: 1rem;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  .figure-back-right {
+    top: 8%;
+    right: 0;
+  }
+}
