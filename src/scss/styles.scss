@@ -162,6 +162,32 @@ $theme-colors: (
     var(--#{$prefix}accordion-border-color);
 }
 
+.nav-footer {
+  background-color: #242946;
+}
+
+.social-icons img{
+  width: 30px;
+}
+
+.valid-feedback {
+  background-color: green;
+  position: relative;
+  color: white;
+  border-radius: 0 0 5px 5px;
+  padding: 5px;
+  top: -8px;
+}
+
+.invalid-feedback {
+  background-color: $danger;
+  position: relative;
+  color: white;
+  border-radius: 0 0 5px 5px;
+  padding: 5px;
+  top: -8px;
+}
+
 @media (max-width: 767px) {
   .w-40,
   .w-60 {
