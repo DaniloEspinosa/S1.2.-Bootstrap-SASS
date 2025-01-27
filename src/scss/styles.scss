@@ -10,20 +10,7 @@ $theme-colors: (
 
 @import "bootstrap/scss/bootstrap";
 
-.navbar {
-  padding: 2rem;
-
-  img {
-    width: 150px;
-  }
-}
-
-.navbar-collapse {
-  align-items: center;
-  justify-content: space-between;
-}
-
-// Secciones del main
+// Estilos generales----------------------------------------------------------
 .w-40 {
   width: 40%;
 }
@@ -32,25 +19,24 @@ $theme-colors: (
   width: 60%;
 }
 
-.image-section img {
+.text-description {
+  width: 70%;
+}
+
+.image-hero img {
   width: 54vw;
 }
 
-.circle {
-  height: 30vw;
-  width: 30vw;
+.image-features img {
+  width: 40vw;
 }
 
-.square {
-  height: 30vw;
-  width: 15vw;
-}
-
+// Forma de fondo de las imagenes--------------------------------------------
 .forma-fondo-derecha {
   width: 45vw;
   height: 30vw;
   background-color: $primary;
-  border-radius: 15vw 0 0 15vw ;
+  border-radius: 15vw 0 0 15vw;
 }
 
 .forma-fondo-izquierda {
@@ -70,6 +56,20 @@ $theme-colors: (
   left: 0;
 }
 
+// Estilos de la navbar-------------------------------------------------------
+.navbar {
+  padding: 2rem;
+  img {
+    width: 150px;
+  }
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Estilos de los tabs features-----------------------------------------------
 .nav-tabs {
   .nav-link {
     border: none;
@@ -80,8 +80,7 @@ $theme-colors: (
 
     &:hover,
     &:focus {
-      color: $black;
-      border-bottom: $danger 2px solid;
+      color: $danger;
     }
 
     &.active {
@@ -90,14 +89,41 @@ $theme-colors: (
   }
 }
 
-.text-description {
-  width: 70%;
+.nav-link,
+.nav-footer .nav-link {
+  &:hover,
+  &:focus {
+    color: $danger;
+  }
 }
 
-.image-features img {
-  width: 40vw;
+// Estilos de los botones------------------------------------------------------
+
+nav .btn,
+form .btn {
+  color: white;
+  &:hover {
+    background-color: white;
+    color: $danger;
+  }
 }
 
+.btn-primary {
+  &:hover {
+    background-color: white;
+    color: $primary;
+  }
+}
+
+.btn-light {
+  &:hover {
+    background-color: white;
+    color: $black;
+    border: 1px black solid;
+  }
+}
+
+// Estilos de las cards y download section--------------------------------------
 .card {
   border: none;
   box-shadow: 6px 10px 22px -7px rgba(0, 0, 0, 0.55);
@@ -133,6 +159,8 @@ $theme-colors: (
   margin-bottom: 25vh;
 }
 
+// FAQs section----------------------------------------------------------------
+
 .accordion {
   width: 60%;
 }
@@ -162,12 +190,27 @@ $theme-colors: (
     var(--#{$prefix}accordion-border-color);
 }
 
+.accordion-button {
+  &:hover {
+    color: $danger;
+  }
+}
+
+// Footer section-------------------------------------------------------------------
 .nav-footer {
   background-color: #242946;
 }
 
-.social-icons img{
+.nav-footer .nav-link {
+  color: white;
+}
+
+.social-icons img {
   width: 30px;
+}
+
+svg path:hover {
+  fill: $danger;
 }
 
 .valid-feedback {
@@ -194,7 +237,11 @@ $theme-colors: (
     width: 95vw;
   }
 
-  .image-section img {
+  .text-description {
+    width: 60%;
+  }
+
+  .image-hero img {
     width: 100%;
   }
 
@@ -202,25 +249,25 @@ $theme-colors: (
     width: 85%;
   }
 
-.forma-fondo-derecha {
-  width: 75vw;
-  height: 50vw;
-  background-color: $primary;
-  border-radius: 25vw 0 0 25vw ;
-}
+  .forma-fondo-derecha {
+    width: 75vw;
+    height: 50vw;
+    background-color: $primary;
+    border-radius: 25vw 0 0 25vw;
+  }
 
-.forma-fondo-izquierda {
-  width: 75vw;
-  height: 50vw;
-  background-color: $primary;
-  border-radius: 0 25vw 25vw 0 ;
-}
+  .forma-fondo-izquierda {
+    width: 75vw;
+    height: 50vw;
+    background-color: $primary;
+    border-radius: 0 25vw 25vw 0;
+  }
 
   .figure-back-right {
     top: 15%;
   }
 
-   .figure-back-left {
+  .figure-back-left {
     top: 17%;
   }
 
@@ -229,10 +276,6 @@ $theme-colors: (
   .card-3 {
     margin: 0 30px;
     width: 100%;
-  }
-
-  .text-description {
-    width: 60%;
   }
 
   .accordion {
