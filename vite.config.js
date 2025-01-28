@@ -7,5 +7,6 @@ export default {
   },
   server: {
     port: 8080
-  }
+  },
+  base:'/S1.2.-Bootstrap-SASS/'
 }
